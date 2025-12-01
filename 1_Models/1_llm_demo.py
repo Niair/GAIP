@@ -1,7 +1,9 @@
 from langchain_openai import OpenAI
-from devenv import load_env
-load_env()
+from dotenv import load_dotenv
 
-llm = OpenAI(model_name="gpt-4")
-response = llm("What is the capital of India?")
+load_dotenv()
+
+llm = OpenAI(model_name="gpt-4o")  
+response = llm.invoke("What is the capital of India?")
+
 print(response)

@@ -1,22 +1,33 @@
 # LangChain Core
 langchain
 langchain-core
+langchain-community
 
 # OpenAI Integration
 langchain-openai
 openai
 
+# Ollama
+langchain-ollama
+ollama
+
 # Anthropic Integration
 langchain-anthropic
+anthropic
 
 # Google Gemini (PaLM) Integration
 langchain-google-genai
 google-generativeai
+# pip install -U langchain-google-genai
+
+# Groq Integration
+langchain-groq
 
 # Hugging Face Integration
 langchain-huggingface
 transformers
 huggingface-hub
+torch
 
 # Environment Variable Management
 python-dotenv
