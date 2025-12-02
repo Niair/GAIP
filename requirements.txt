@@ -28,6 +28,7 @@ langchain-huggingface
 transformers
 huggingface-hub
 torch
+sentence-transformers
 
 # Environment Variable Management
 python-dotenv
@@ -35,3 +36,6 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
+
+# Web Frameworks
+streamlit
