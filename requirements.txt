@@ -39,3 +39,6 @@ scikit-learn
 
 # Web Frameworks
 streamlit
+
+# Other LangChain Integrations
+Pydantic

@@ -1,0 +1,11 @@
+{
+      "title": "This is mainly used in case when we are using the multiple languages in our project",
+      "description": "schema about how we learned the json schema works in langchain",
+      "type": "object", # Data Type
+      "properties": {
+            "name": "string",
+            "age": "integer",
+            "cgpa": "double"
+      },
+      "required": ["name", "cgpa"] # age is optional here
+}
