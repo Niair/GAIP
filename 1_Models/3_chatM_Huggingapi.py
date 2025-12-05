@@ -1,15 +1,16 @@
-# This one works but not working for other models from Hugging Face using api keys as their endpoints responce is canseled, so only option
-# is to use it locally, or using the paid plan.
-
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from dotenv import load_dotenv
+from langchain_core.prompts import PromptTemplate
+
 load_dotenv()
+
 llm = HuggingFaceEndpoint(
-        repo_id="HuggingFaceH4/zephyr-7b",
-        task="text-generation",
-        temperature=0.7,
-        max_new_tokens=200
+    repo_id="google/gemma-2-2b-it",
+    task="text-generation"
 )
+
 model = ChatHuggingFace(llm=llm)
-result = model.invoke("What is the capital of India?")
+
+result = model.invoke("what is the capital of India?")
+
 print(result.content)

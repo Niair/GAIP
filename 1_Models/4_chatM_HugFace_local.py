@@ -1,10 +1,14 @@
-# https://youtu.be/bFB4zqkcatU?si=fT4CxxBg2EcVcDp1 (main)
-# https://youtu.be/1h6lfzJ0wZw?si=xTa8McdJ5_xLkEYm
+from langchain_huggingface import HuggingFacePipeline
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-from transformers import pipeline
+model_id = "HuggingFaceTB/SmolLM2-135M-Instruct"
 
-model = pipeline(task = "text-generation", model="facebook/bart-large-cnn")
+tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(model_id)
 
-response = model("Tell me a short story about a robot learning to love.", max_length=100, do_sample=True, temperature=0.7)
+pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=100)
+llm = HuggingFacePipeline(pipeline=pipe)
 
-print(response[0]['generated_text'])
+# Format for instruction models
+response = llm.invoke("What is the capital of India?\nassistant\n", max_new_tokens=50)
+print(response)

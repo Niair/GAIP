@@ -42,3 +42,6 @@ streamlit
 
 # Other LangChain Integrations
 Pydantic
+safetensors 
+accelerate
+sentencepiece
