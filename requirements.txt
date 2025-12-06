@@ -46,3 +46,6 @@ safetensors
 accelerate
 sentencepiece
 grandalf
+pypdf
+chromadb
+# conda install -c pytorch faiss-gpu
