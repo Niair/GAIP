@@ -50,3 +50,4 @@ pypdf
 chromadb
 # conda install -c pytorch faiss-gpu
 semantic-chunker-langchain
+wikipedia
