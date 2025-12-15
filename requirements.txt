@@ -51,3 +51,8 @@ chromadb
 # conda install -c pytorch faiss-gpu
 semantic-chunker-langchain
 wikipedia
+
+# searching-tools
+duckduckgo-search
+# pip install -U ddgs
+langchain-experimental
