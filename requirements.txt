@@ -2,10 +2,14 @@
 langchain
 langchain-core
 langchain-community
+langchainhub
 
 # OpenAI Integration
 langchain-openai
 openai
+
+# perplexity
+langchain-perplexity
 
 # Ollama
 langchain-ollama
