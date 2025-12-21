@@ -60,3 +60,12 @@ wikipedia
 duckduckgo-search
 # pip install -U ddgs
 langchain-experimental
+
+
+# ---------------------------------------------------------
+
+# LangGraph Specific Requirements
+
+# ---------------------------------------------------------
+
+langgraph
