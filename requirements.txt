@@ -69,3 +69,4 @@ langchain-experimental
 # ---------------------------------------------------------
 
 langgraph
+langgraph-checkpoint-sqlite
