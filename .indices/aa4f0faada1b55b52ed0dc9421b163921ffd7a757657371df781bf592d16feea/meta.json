@@ -1,0 +1,6 @@
+{
+  "pdf_path": "E:\\_Projects\\GAIP\\Lang_Smith\\docs\\islr.pdf",
+  "chunk_size": 1000,
+  "chunk_overlap": 150,
+  "embedding_model": "models/text-embedding-004"
+}
