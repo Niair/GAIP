@@ -8,7 +8,6 @@ from langchain_core.messages import BaseMessage
 from dotenv import load_dotenv
 load_dotenv()
 import sqlite3
-
 import time
 
 # -------------------------------------------------------------

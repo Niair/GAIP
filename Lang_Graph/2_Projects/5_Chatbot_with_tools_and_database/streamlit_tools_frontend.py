@@ -1,6 +1,6 @@
 import streamlit as st
-from LangGraph_Database_Backend import chatbot, model, retrieve_all_threads
-from langchain_core.messages import HumanMessage
+from langgraph_tools_backend import chatbot, model, retrieve_all_threads
+from langchain_core.messages import HumanMessage, AIMessage
 import uuid
 
 # ******************************************************  Utility Functions  ******************************************************
@@ -125,13 +125,16 @@ if user_input:
       } # "chat_turn"
 
       with st.chat_message("ai"):
-            ai_message = st.write_stream(
-                  message_chunk.content for message_chunk, metadata in chatbot.stream(
-                        {'messages' : [HumanMessage(content = user_input)]}, 
+            def ai_olny_message():
+                 for message_chunk, metadata in chatbot.stream(
+                      {'messages' : [HumanMessage(content = user_input)]}, 
                         config = CONFIG, 
                         stream_mode = 'messages'
-                  )
-            )
+                 ):
+                      if isinstance(message_chunk, AIMessage):
+                           yield message_chunk.content
+            
+            ai_message = st.write_stream(ai_olny_message())
       
       st.session_state['message_history'].append({"role" : "ai", "content" : ai_message})
 
