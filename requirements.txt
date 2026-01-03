@@ -70,7 +70,7 @@ langchain-experimental
 
 langgraph
 langgraph-checkpoint-sqlite
-
+langchain-mcp-adapters
 
 # ---------------------------------------------------------
 
