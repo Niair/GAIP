@@ -1,0 +1,10 @@
+[project]
+name = "gaip"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chainlit>=2.9.4",
+    "langchain-mcp-adapters>=0.2.1",
+]
